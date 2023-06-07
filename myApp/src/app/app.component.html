@@ -1,9 +1,12 @@
-<app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<!-- when I click on the button in the header I call the function onSelect and I send it the type of feature I want to display
+and then in the onSelect function we use the eventemitter featureSelected to emit the result to all subscribers
+$event is a protected name the output of the emit -->
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="loadedFeature==='recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadedFeature!=='recipe'"></app-shopping-list>
     </div>
     
   </div>

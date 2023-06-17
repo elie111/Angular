@@ -61,7 +61,37 @@ export class AppComponent {
         panX: true,
         panY: true
       }));
+      let tooltip: any = am5.Tooltip.new(root, {
+        getFillFromSprite: false,
+        getStrokeFromSprite: false,
+        autoTextColor: false
+        
+      });
 
+      tooltip.get("background").setAll({
+        fillOpacity: 1,
+        fill: am5.color("#FFE9A4"),
+      });
+      tooltip.label.setAll({
+        fill: am5.color("#18285F")
+      });
+      
+
+      let tooltip2: any = am5.Tooltip.new(root, {
+        getFillFromSprite: false,
+        getStrokeFromSprite: false,
+        autoTextColor: false
+      });
+
+      tooltip2.get("background").setAll({
+        // strokeOpacity: 1,
+        // stroke: am5.color("#18285F"),
+        fillOpacity: 1,
+        fill: am5.color("#FFE9A4"),
+      });
+      tooltip2.label.setAll({
+        fill: am5.color("#18285F")
+      });
 
       // Create value axis
       // -------------------------------------------------------------------------------
@@ -74,7 +104,7 @@ export class AppComponent {
           
         }),
         extraMin: 0.1, // adds some space for for main series
-        tooltip: am5.Tooltip.new(root, {}),
+        tooltip: tooltip2,
         numberFormat: "#,###.00",
         extraTooltipPrecision: 2,
         
@@ -87,7 +117,7 @@ export class AppComponent {
           count: 24
         },
         renderer: am5xy.AxisRendererX.new(root, {}),
-        tooltip: am5.Tooltip.new(root, {})
+        tooltip: tooltip
       }));
 
 
@@ -156,10 +186,12 @@ export class AppComponent {
 
 
       }));
+
       valueLegend.settingsButtons.template.set("visible", false);
       valueLegend.markers.template.setAll({
         width: 8,
         height: 8
+        
       });
 
 
@@ -229,10 +261,9 @@ export class AppComponent {
         snapToSeries: [valueSeries],
         snapToSeriesBy: "y!",
         
+        
       }));
       
-
-
       // Add scrollbar
       // -------------------------------------------------------------------------------
       // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
@@ -679,18 +710,7 @@ export class AppComponent {
         { Date: 1648641600000, Open: 389.55, High: 392.7, Low: 378.63, Close: 381.47, Volume: 4023300 }
       ];
 
-      let tooltip: any = am5.Tooltip.new(root, {
-        getStrokeFromSprite: true,
-        getFillFromSprite: true
-      });
 
-      tooltip.get("background").setAll({
-        strokeOpacity: 1,
-        stroke: am5.color(0x880808),
-        fillOpacity: 1,
-        fill: am5.color(0x4C4C4C)
-
-      });
 
 
 
@@ -736,25 +756,7 @@ export class AppComponent {
       // sbSeries.data.setAll(data);
       root._logo!.dispose();
       
-      responsive.addRule({
-        relevant: am5themes_Responsive.widthM,
-        applying: function() {
-          mainPanel.set("layout", root.verticalLayout);
-          valueLegend.setAll({
-            y: null,
-            x: am5.p0,
-            centerX: am5.p0
-          });
-        },
-        removing: function() {
-          mainPanel.set("layout", root.horizontalLayout);
-          valueLegend.setAll({
-            y: am5.p50,
-            centerY: am5.p50,
-            x: null,
-          });
-        }
-      });
+    
       
 
     });

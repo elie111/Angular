@@ -113,7 +113,7 @@ export default function (element, root, _prefix) {
             }),
             new StyleRule(element, ".am5stock-control-label", {
                 "display": "inline-block",
-                "margin": "0 0px 0 5px",
+                "margin": "0 0 0 5px",
                 "color":"#18285F",
                 "cursor": "pointer"
             }),
@@ -126,11 +126,14 @@ export default function (element, root, _prefix) {
                 "background": bg,
                 "border": "1px solid " + border,
                 "border-radius": "3px",
-                "cursor": "pointer"
+                "cursor": "pointer",
+                "background-color":"#FFC10E",
+                "border-radius": "10px",
             }),
             new StyleRule(element, ".am5stock-align-right .am5stock-control-list-container", {
                 "left": "auto",
-                "right": "0"
+                "right": "0",
+                "background-color":"#FFC10E"
             }),
             new StyleRule(element, ".am5stock-control-list-arrow", {
                 "position": "absolute",
@@ -141,24 +144,31 @@ export default function (element, root, _prefix) {
                 "background": bg,
                 "display": "inline-block",
                 "padding": "5px",
-                "transform": "rotate(-135deg)"
+                "transform": "rotate(-135deg)",
+                "background-color":"#FFC10E"
             }),
             new StyleRule(element, ".am5stock-align-right .am5stock-control-list-arrow", {
                 "right": "5px",
-                "left": "auto"
+                "left": "auto",
+                "background-color":"#FFC10E"
             }),
             new StyleRule(element, ".am5stock-control-list", {
                 "list-style": "none",
                 "margin": "5px",
-                "padding": "2px",
-                "white-space": "nowrap"
+                "padding": "8px",
+                "white-space": "nowrap",
+                
             }),
             new StyleRule(element, ".am5stock-control-list li", {
                 "padding": "2px 6px 2px 6px",
                 "position": "relative"
             }),
             new StyleRule(element, ".am5stock-control-list li:hover", {
-                "background": active
+                "background": active,
+                "background-color":"#FFE9A4",
+                "border-radius": "10px",
+                "width":"100%"
+
             }),
             new StyleRule(element, ".am5stock-control-list li.am5stock-list-info", {
                 "font-style": "italic",

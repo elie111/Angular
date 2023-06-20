@@ -125,7 +125,7 @@ export class AppComponent {
       // -------------------------------------------------------------------------------
       // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
       let valueSeries = mainPanel.series.push(am5xy.LineSeries.new(root, {
-        name: "MSFT",
+       // name: "MSFT",
         // clustered: false,
         valueXField: "Date",
         valueYField: "Close",
@@ -135,7 +135,8 @@ export class AppComponent {
         calculateAggregates: true,
         xAxis: dateAxis,
         yAxis: valueAxis,
-        legendValueText: " high: [bold]{highValueY}[/] low: [bold]{lowValueY}[/]",
+        legendValueText: " \n [bold]{valueX.formatDate('yyyy-MM-dd')}[/]  [br]\n \n  [bold][#00ff00]${valueY}[/] \n",
+        //https://www.amcharts.com/docs/v4/concepts/formatters/formatting-strings/
         legendRangeValueText: "",
         stroke:am5.color("#18285F")
 
@@ -186,15 +187,35 @@ export class AppComponent {
 
 
       }));
-
       valueLegend.settingsButtons.template.set("visible", false);
       valueLegend.markers.template.setAll({
-        width: 8,
-        height: 8
+        width: 50,
+        height: 50,
+        visible:false
         
       });
+            
+      valueLegend.valueLabels.template.setAll({
+        fontSize: 16,
+        fontWeight: "400",
+        fontFamily:"Assistans",
+        fontStyle:"normal",
+        textAlign:'center'
+      });
 
+      valueLegend.hide();
 
+      // Add a mouseover event listener to the chart's container
+      root.container.events.on("pointerover", function() {
+        // Show the legend when the mouse is over the chart
+        valueLegend.show();
+      });
+      
+      // Add a mouseout event listener to the chart's container
+      root.container.events.on("pointerout", function() {
+        // Hide the legend when the mouse moves out of the chart
+        valueLegend.hide();
+      });
       // Create volume axis
       // -------------------------------------------------------------------------------
       // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
@@ -249,7 +270,7 @@ export class AppComponent {
       // -------------------------------------------------------------------------------
       // https://www.amcharts.com/docs/v5/charts/stock-chart/#Setting_main_series
       stockChart.set("volumeSeries", volumeSeries);
-      valueLegend.data.setAll([valueSeries, volumeSeries]);
+      valueLegend.data.setAll([valueSeries]);
 
 
       // Add cursor(s)

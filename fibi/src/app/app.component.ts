@@ -135,9 +135,9 @@ export class AppComponent {
         calculateAggregates: true,
         xAxis: dateAxis,
         yAxis: valueAxis,
-        legendValueText: " \n [bold]{valueX.formatDate('yyyy-MM-dd')}[/]  [br]\n \n  [bold][#00ff00]${valueY}[/] \n",
+        legendValueText: " \n [bold][font-family: font-family: 'Assistant';font-size: 22px;]{valueX.formatDate('yyyy-MM-dd')}[/]  [br]\n \n  [bold][font-family: font-family: 'Assistant';font-size: 22px;][#2BBF66]${valueY}[/] \n",
         //https://www.amcharts.com/docs/v4/concepts/formatters/formatting-strings/
-        legendRangeValueText: "",
+        //legendRangeValueText: "\n [bold]{valueY}[/]  [br]\n",
         stroke:am5.color("#18285F")
 
         
@@ -208,7 +208,7 @@ export class AppComponent {
       // Add a mouseover event listener to the chart's container
       root.container.events.on("pointerover", function() {
         // Show the legend when the mouse is over the chart
-        valueLegend.show();
+       valueLegend.show();
       });
       
       // Add a mouseout event listener to the chart's container

@@ -1,0 +1,95 @@
+<mxfile host="app.diagrams.net" modified="2024-06-09T11:10:30.712Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="UHRuSOPH8BjCke7Y8dRZ" version="24.4.9" type="github">
+  <diagram name="Page-1" id="TgvL29W5KkSxQbaJsPKu">
+    <mxGraphModel dx="2049" dy="2166" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pZitNKCeyRT8TtTBP_jO-1" value="What is the task/goal?&lt;div&gt;what do we have so far?&lt;/div&gt;&lt;div&gt;what is the work plan?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;TASK:&lt;/div&gt;&lt;div&gt;Create a CICD pipeline for the development and deployment process of the ng project with taking into consideration that it should be flexible and scalable&lt;/div&gt;&lt;div&gt;so that it can be easily used in the future as the base of other projects CICD pipeline&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;specific things that needs to be implemented:&lt;/div&gt;&lt;div&gt;- monitoring git activity and compiling and creating artifacts once a new version is ready (once pushed to main branch maybe)&lt;/div&gt;&lt;div&gt;- taking screenshots if needed&lt;/div&gt;&lt;div&gt;- uploading artifact to google console / apple developer&lt;/div&gt;&lt;div&gt;- adding comments/ summary/ description&lt;/div&gt;&lt;div&gt;- possible testing options (need to check, don&#39;t have enough information)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;What have we done so far?&amp;nbsp;&lt;/div&gt;&lt;div&gt;- created a basic Fastlane pipeline that compiles a flutter project and uploads the APK/ABB file to google play and updates the version.&lt;/div&gt;&lt;div&gt;- created a Jenkins pipeline that detects when we push to the main branch then it runs the Fastlane script automatically&lt;/div&gt;&lt;div&gt;- started installing required libs/tools to a Linux server&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;and what do we need to focus on next?&lt;br&gt;&lt;/div&gt;&lt;div&gt;- need to migrate all our work to a Linux server&lt;/div&gt;&lt;div&gt;- need to refactor all work done so fat to follow best practice rules&lt;/div&gt;&lt;div&gt;- need to make sure our Jenkins/Git logic is ok and flexible so we can easily change/add another git repo of another project in the future&lt;/div&gt;&lt;div&gt;- need to keep working on the Fastlane pipeline and add all the&amp;nbsp;&lt;/div&gt;&lt;div&gt;options/lanes we want: screenshots, update version, add comments )&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;check the Lichess mobile app for help&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;work plan?&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- need to always take in mind that everything we do must be flexible to use it for other projects in the future&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- meet twice a week for an update (Mondays and Thursdays?)&lt;br&gt;- start from the top to the bottom: start with setting up the Linux server, then Jenkins and Git, then Fastlane and any other tool related to a specific&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;development language (for now Fastlane is only compatible with Mobile, need to find another tool for Angular maybe), then we need to set up google play&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;and apple developer&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Skills/tools/languages that we need learn&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Linux:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp;- Linux&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp;- apt/yum to install libs and other things&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Jenkins and Git:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;- freestyle vs pipeline scripts which to use?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;- how to integrate Jenkins with Git: Web Hooks, jobs?&lt;/div&gt;&lt;div&gt;&amp;nbsp; - built in automation tools in GitLab&lt;/div&gt;&lt;div&gt;Fastlane:&lt;/div&gt;&lt;div&gt;&amp;nbsp; - what can Fastlane do?&lt;/div&gt;&lt;div&gt;&amp;nbsp; - which platform does it support? android, iOS, web&lt;/div&gt;&lt;div&gt;&amp;nbsp; - does it work with Angular?&lt;/div&gt;&lt;div&gt;&amp;nbsp; - how to run Fastlane iOS script&lt;/div&gt;&lt;div&gt;Google play / apple developer&lt;/div&gt;&lt;div&gt;&amp;nbsp; - how to give Fastlane access&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="50" y="-85" width="840" height="930" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LlYiLH89Gu4RyppNAJE2-2" target="LlYiLH89Gu4RyppNAJE2-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LlYiLH89Gu4RyppNAJE2-2" target="LlYiLH89Gu4RyppNAJE2-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-2" value="Jenkins and Fastlane&lt;div&gt;server&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="LlYiLH89Gu4RyppNAJE2-3" target="LlYiLH89Gu4RyppNAJE2-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="909.9999999999995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-3" value="macOs server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LlYiLH89Gu4RyppNAJE2-4" target="LlYiLH89Gu4RyppNAJE2-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="919.9999999999995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-4" value="Linux server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="890" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LlYiLH89Gu4RyppNAJE2-5" target="LlYiLH89Gu4RyppNAJE2-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-5" value="gitlab" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-6" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Docker&lt;/h1&gt;&lt;div&gt;we need to use Docker images for effeicent and modern CICD pipeline, we can use a&amp;nbsp;&lt;/div&gt;&lt;div&gt;Jenkins Image&lt;/div&gt;&lt;div&gt;Fastlane Image&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="890" y="920" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-7" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;AWS&lt;/h1&gt;&lt;div&gt;we can use AWS EC2 servers instead of the ones the company uses currently, it will solve the xcode problem and will modernize our methods&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="890" y="1140" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-8" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Jenkins&lt;/h1&gt;&lt;div&gt;we have considered using gitlab build in CICD tool but it&#39;s not the most safe and professional option, so we are going to check how to set up Jenkins using docker and add all the neccessary plug-ins&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="890" y="1370" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-9" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Fastlane&lt;/h1&gt;&lt;div&gt;Fastlane is the only open source automation tool for mobile as far as I know, code magic might be better but it&#39;s expensive, so we need to check which is better for our requirements&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="920" width="180" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-10" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Xcode&lt;/h1&gt;&lt;div&gt;we need Xcode to run macOs/IOS code, for that we will need to use AWS or one of the macs in the office&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="1140" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-11" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Gitlab&lt;/h1&gt;&lt;div&gt;we need to have a clear pipeline, which branches are the important ones? do we have automated tests? do we need a certain naming convention for branches or commits?&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="1370" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-12" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;CI&lt;/h1&gt;&lt;div&gt;CI is everything up until the moment we need to upload the app to production (or maybe to google play testing / beta)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;we push code&lt;/div&gt;&lt;div&gt;we compile code&lt;/div&gt;&lt;div&gt;we test&lt;/div&gt;&lt;div&gt;we create a&amp;nbsp; new version&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1380" width="180" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-13" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;CD&lt;/h1&gt;&lt;div&gt;CD is everything after we have a new version ready for release&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;upload app to google play&lt;/div&gt;&lt;div&gt;add people to beta?&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1380" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-14" value="google play" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1070" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-15" value="apple dev" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-17" value="push to main branch triggers jenkins script, which then triggers Fastlane script" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="815" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-20" value="compile ios on mac server" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="710" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-22" value="compile android on linux server" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="900" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LlYiLH89Gu4RyppNAJE2-26" target="LlYiLH89Gu4RyppNAJE2-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LlYiLH89Gu4RyppNAJE2-26" target="LlYiLH89Gu4RyppNAJE2-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-26" value="Test?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LlYiLH89Gu4RyppNAJE2-29" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;need to learn:&lt;/h1&gt;&lt;div&gt;- AWS&lt;/div&gt;&lt;div&gt;- Docker&lt;/div&gt;&lt;div&gt;- Jenkins&lt;/div&gt;&lt;div&gt;- Linux&lt;/div&gt;&lt;div&gt;- Fastlane&lt;/div&gt;&lt;div&gt;- Xcode / iOS / macOS logic&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1125" width="180" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
